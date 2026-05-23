@@ -1,4 +1,4 @@
-from app import add, divide, subtract, multiply, power, root, square
+from app import add, divide, subtract, multiply, power, root, square,modulus
 import pytest
 
 def test_add():
@@ -9,6 +9,9 @@ def test_power():
 
 def test_subtract():
     assert subtract(5, 3) == 2
+
+def test_modulus():
+    assert modulus(10, 3) == 1
 
 def test_root():
     assert root(27, 3) == 3
@@ -31,3 +34,25 @@ def test_square():
 #     git checkout main
 # git pull origin main
 # git checkout -b feature/add-modulo
+
+def test_native_add():
+    with pytest.raises(ValueError):
+        add(-1, 5)
+def test_native_modulus():
+    with pytest.raises(ValueError):
+        modulus(-1, 5)
+def test_native_subtract():
+    with pytest.raises(ValueError):
+        subtract(-1, 5)
+def test_native_power():
+    with pytest.raises(ValueError):
+        power(-1, 5)
+def test_native_multiply():
+    with pytest.raises(ValueError):
+        multiply(-1, 5)
+def test_native_root():
+    with pytest.raises(ValueError):
+        root(-1, 5)
+def test_native_square():
+    with pytest.raises(ValueError):
+        square(-1)
