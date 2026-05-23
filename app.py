@@ -10,11 +10,14 @@ def subtract(a, b):
 def power(a, b):
     return a ** b
 
-def square(a):
-    return power(a, 2)
-
 def multiply(a, b):
     return a * b
+
+def root(a, n):
+    return a ** (1/n)
+
+def square(a):
+    return a ** 2
 
 def divide(a, b):
     return a / b
