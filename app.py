@@ -10,6 +10,9 @@ def subtract(a, b):
 def power(a, b):
     return a ** b
 
+def square(a):
+    return power(a, 2)
+
 def multiply(a, b):
     return a * b
 
