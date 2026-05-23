@@ -1,9 +1,11 @@
-from app import add, divide, subtract, multiply
+from app import add, divide, subtract, multiply, modulus
 
 
 def test_add():
     assert add(2, 3) == 5
 
+def test_modulus():
+    assert modulus(10, 3) == 1
 
 def test_subtract():
     assert subtract(5, 3) == 2
