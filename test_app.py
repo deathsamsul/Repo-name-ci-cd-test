@@ -1,4 +1,4 @@
-from app import add, divide, subtract, multiply, power
+from app import add, divide, subtract, multiply, power, root
 
 
 def test_add():
@@ -10,6 +10,8 @@ def test_power():
 def test_subtract():
     assert subtract(5, 3) == 2
 
+def test_root():
+    assert root(27, 3) == 3
 
 def test_multiply():
     assert multiply(4, 3) == 12
